@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.1.1/dist/alpine.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body class="black text-white">
+    <header class="flex justify-between py-6 px-32 m-auto">
+        <div>
+            <img src="assets/icons/logo.svg" alt="">
+        </div>
+        <nav class="flex gap-x-9">
+            <a href="">Item First</a>
+            <a href="">Item Two</a>
+            <a href="">Item Three</a>
+            <a href="">Item Four</a>
+            <a href="">Item Five</a>
+        </nav>
+        <div class="flex gap-x-8 items-center">
+            <img class="w-4" src="assets/icons/alert.svg" alt="">
+            <div class="">
+                <div x-data="{ open: false }" class="relative">
+                    <button x-on:click="open = true"
+                        class="flex items-center focus:bg-violet-600 focus:outline-none py-2.5 px-3.5 rounded-t"
+                        type="button">
+                        <img class="w-4" src="assets/icons/settings.svg" alt="">
+                    </button>
+                    <ul x-show="open" x-on:click.away="open = false"
+                        class="bg-violet-600 text-gray-700 rounded shadow-lg absolute py-7 px-2.5 top-8 right-0"
+                        style="min-width:15rem">
+                        <li>
+                            <a href="#"
+                                class="block hover:bg-violet-500 rounded-3xl text-white whitespace-no-wrap py-2 px-4">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block hover:bg-violet-500 rounded-3xl text-white whitespace-no-wrap py-2 px-4">
+                                Manage My Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <img class="w-4" src="assets/icons/user.svg" alt="">
+        </div>
+    </header>
+    <div class="flex flex justify-between items-center border-b-2 border-zinc-900  py-12 px-32 m-auto">
+        <h2 class="text-3xl">MANAGE MY ACCOUNT</h2>
+        <div class="bg-zinc-800 rounded px-6 py-3">
+            <select class="bg-zinc-800 rounded outline-none pr-16" name="cars" id="cars">
+                <option value="volvo">Sort by date</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+    </div>
+    <div class="pt-6 px-32 m-auto ">
+        <div class="pl-32 pt-12">
+            <div class="flex gap-x-11">
+                <span class="text-xl">Personal Details</span>
+                <span class="opacity-50">My Videos</span>
+            </div>
+            <div class="py-28">
+                <div class="flex justify-between">
+                    <h1 class="pb-5 text-xl">About the company</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="py-7 flex flex-col gap-y-7 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Your avatar</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <div class="flex items-center">
+                    <img class="w-24 h-24" src="assets/icons/evitar.svg" alt="">
+                    <span class="pl-5">Your avatar.png</span>
+                </div>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Current Job Title</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <p class="text-sm font-extralight">Badboy Rudeboy</p>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Years of Experience in current role</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <div class="flex gap-x-16">
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>Less than a year</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>1-5 years</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>5-10 years</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>10 years +</span>
+                    </div>
+                </div>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Desired Job Title</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <p class="text-sm font-extralight">Voodoo Badboy</p>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Years of Experience in desired role</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <div class="flex gap-x-16">
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>None</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>Less than a year</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>1-5 years</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>5-10 years</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>10 years +</span>
+                    </div>
+                </div>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Salary Expectation</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <p class="text-sm font-extralight">£25,000 - £30,000</p>
+            </div>
+            <div class="py-7 flex flex-col gap-y-5 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Company Size</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <div class="flex gap-x-16">
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>Less than a year</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>10-20 Employees</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>20-30 Employees</span>
+                    </div>
+                    <div class="flex gap-x-3.5 items-center">
+                        <div class="w-4 h-4 rounded-full green"></div>
+                        <span>40+ Employees</span>
+                    </div>
+                </div>
+            </div>
+            <h1 class="pb-5">Tags</h1>
+            <div class="flex gap-4 flex-wrap pb-7">
+                <div class="green text-black text-xs px-2.5 py-1 rounded-3xl flex justify-center items-center">
+                    Skill name here
+                    <span class="pl-5">X</span>
+                </div>
+                <div class="green text-black text-xs px-2.5 py-1 rounded-3xl flex justify-center items-center">
+                    Skill name here
+                    <span class="pl-5">X</span>
+                </div>
+                <div class="green text-black text-xs px-2.5 py-1 rounded-3xl flex justify-center items-center">
+                    Skill name here
+                    <span class="pl-5">X</span>
+                </div>
+            </div>
+            <div class="py-7 flex flex-col gap-y-2 border-t border-zinc-900">
+                <div class="flex justify-between">
+                    <h1 class="text-xl">Delete my account</h1>
+                    <img src="assets/icons/edit_pen.svg" alt="">
+                </div>
+                <p class="text-base opacity-50">Permanently delete your account</p>
+                <div class="pb-7">
+                    <input class="bg-black" type="checkbox" name="" id="deleteA">
+                    <label class="pl-5" for="deleteA">I understand that by deleting my account all data, including
+                        application data will be permanently erased and cannot be recovered.
+                    </label>
+                </div>
+                <button class="border-2 border-violet-700 rounded w-52 py-4">Delete My Account</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg-zinc-900 mt-36 h-36 flex justify-end items-center px-32">
+        <div class="flex items-center gap-7">
+            <button class="border-2 border-violet-700 rounded px-7 py-5">Cancel</button>
+            <button
+                class="px-7 py-5 rounded mahroon hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Save
+                Changes</button>
+        </div>
+    </div>
+</body>
+
+</html>

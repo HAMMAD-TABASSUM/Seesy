@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body class="black text-white">
+    <header class="flex justify-between py-6 px-32 m-auto">
+        <div>
+            <img src="assets/icons/logo.svg" alt="">
+        </div>
+        <nav class="flex gap-x-9">
+            <a href="">Item First</a>
+            <a href="">Item Two</a>
+            <a href="">Item Three</a>
+            <a href="">Item Four</a>
+            <a href="">Item Five</a>
+        </nav>
+        <div class="flex gap-x-8">
+            <img class="w-4" src="assets/icons/Chat.svg" alt="">
+            <img class="w-4" src="assets/icons/alert.svg" alt="">
+            <img class="w-4" src="assets/icons/settings.svg" alt="">
+            <img class="w-4" src="assets/icons/user.svg" alt="">
+        </div>
+    </header>
+
+    <div class="pt-6 px-32 m-auto ">
+        <div class="pb-10 border-b-2 border-stone-800">
+            <h2 class="text-xl">Cotswold AUDI</h2>
+            <h1 class="text-3xl pt-3">billing information</h1>
+        </div>
+    </div>
+
+    <div class="px-32 m-auto flex flex-col gap-y-2.5 pt-36">
+        <input class="text-black rounded outline-none px-6 py-4 w-80" type="text" placeholder="Card Number">
+        <div class="w-80 flex rounded bg-white pl-6 flex justify-between">
+            <input class="text-black outline-none  py-4 w-full" type="text" placeholder="Start">
+            <span class="text-black opacity-50 flex items-center pr-6">00/00</span>
+        </div>
+        <div class="w-80 flex rounded bg-white pl-6 flex justify-between">
+            <input class="text-black outline-none py-4 w-full" type="text" placeholder="End">
+            <span class="text-black opacity-50 flex items-center pr-6">00/00</span>
+        </div>
+        <div class="w-80 flex rounded bg-white pl-6 flex justify-between">
+            <input class="text-black outline-none py-4 w-full" type="text" placeholder="CCV">
+            <span class="text-black opacity-50 flex items-center pr-6">00/00</span>
+        </div>
+        <div class="w-80">
+            <button
+                class="px-7 py-5 rounded mahroon hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Add
+                Card
+            </button>
+        </div>
+    </div>
+    <div class="px-32 m-auto pt-16">
+        <p class="pb-5">Choose another payment method</p>
+        <img class="cursor-pointer" src="assets/icons/Payment-methods.svg" alt="">
+    </div>
+    <div class="bg-zinc-900 mt-36 h-36 flex justify-end items-center px-32">
+        <button
+            class="px-7 py-5 rounded mahroon hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Save
+            & View Your Dashboard
+        </button>
+    </div>
+</body>
+
+</html>
